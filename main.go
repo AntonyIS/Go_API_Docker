@@ -1,18 +1,11 @@
 package main
 
 import (
+	"example.com/routes"
 	"github.com/gin-gonic/gin"
 )
 
-type developer struct {
-	Name  string ` json "name"`
-	Emoji string `json "emoji"`
-}
-
-var developers = []developer{
-	{Name: "John Doe", Emoji: ":)"},
-	{Name: "Mary Doe", Emoji: ";)"},
-}
+var developers = routes.Developers
 
 func main() {
 	router := gin.Default()
